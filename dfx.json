@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "Aman_backend": {
+      "main": "src/Aman_backend/main.mo",
+      "type": "motoko"
+    },
+    "Aman_frontend": {
+      "dependencies": [
+        "Aman_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/Aman_frontend/src/index.html"
+      },
+      "source": [
+        "src/Aman_frontend/assets",
+        "dist/Aman_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
